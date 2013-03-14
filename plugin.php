@@ -138,6 +138,7 @@ class MewCinema {
 	public function register_plugin_styles() {
 	
 		// TODO:	Change 'plugin-name' to the name of your plugin
+		wp_enqueue_style( 'mewcinema-flexslider-styles', plugins_url( 'mewcinema/vendor/flexslider/flexslider.css' ) );
 		wp_enqueue_style( 'mewcinema-plugin-styles', plugins_url( 'mewcinema/css/display.css' ) );
 	
 	} // end register_plugin_styles
@@ -148,7 +149,9 @@ class MewCinema {
 	public function register_plugin_scripts() {
 	
 		// TODO:	Change 'plugin-name' to the name of your plugin
+		wp_enqueue_script( 'mewcinema-flexslider-script', plugins_url( 'mewcinema/vendor/flexslider/jquery.flexslider-min.js' ), array( 'jquery' ), '20120206', true );
 		wp_enqueue_script( 'mewcinema-plugin-script', plugins_url( 'mewcinema/js/display.js' ) );
+
 	
 	} // end register_plugin_scripts
 	
@@ -398,138 +401,6 @@ class MewCinema {
     			strip_tags($_POST['time'])
     		);
     	}
-    	/*
-    	if (isset($_POST['mew_movie_length'])) {
-    		update_post_meta(
-    			$id,
-    			'mew_movie_length',
-    			strip_tags($_POST['mew_movie_length'])
-    		);
-    	}
-
-    	// Check if cinema selected, save cinema, start, end, time
-    	if (isset($_POST['cinema1']) && $_POST['cinema1'] != "") {
-    		update_post_meta(
-    			$id,
-    			'cinema1',
-    			strip_tags($_POST['cinema1'])
-    		);
-
-    		update_post_meta(
-    			$id,
-    			'start_date1',
-    			strip_tags($_POST['start_date1'])
-    		);
-
-    		update_post_meta(
-    			$id,
-    			'end_date1',
-    			strip_tags($_POST['end_date1'])
-    		);
-
-    		update_post_meta(
-    			$id,
-    			'time1',
-    			strip_tags($_POST['time1'])
-    		);
-    	} else {
-    		delete_post_meta($id, 'cinema1');
-    		delete_post_meta($id, 'start_date1');
-    		delete_post_meta($id, 'end_date1');
-    		delete_post_meta($id, 'time1');
-    	}
-
-    	if (isset($_POST['cinema2']) && $_POST['cinema2'] != "") {
-    		update_post_meta(
-    			$id,
-    			'cinema2',
-    			strip_tags($_POST['cinema2'])
-    		);
-
-    		update_post_meta(
-    			$id,
-    			'start_date2',
-    			strip_tags($_POST['start_date2'])
-    		);
-
-    		update_post_meta(
-    			$id,
-    			'end_date2',
-    			strip_tags($_POST['end_date2'])
-    		);
-
-    		update_post_meta(
-    			$id,
-    			'time2',
-    			strip_tags($_POST['time2'])
-    		);
-    	} else {
-    		delete_post_meta($id, 'cinema2');
-    		delete_post_meta($id, 'start_date2');
-    		delete_post_meta($id, 'end_date2');
-    		delete_post_meta($id, 'time2');
-    	}
-
-    	if (isset($_POST['cinema3']) && $_POST['cinema3'] != "") {
-    		update_post_meta(
-    			$id,
-    			'cinema3',
-    			strip_tags($_POST['cinema3'])
-    		);
-
-    		update_post_meta(
-    			$id,
-    			'start_date3',
-    			strip_tags($_POST['start_date3'])
-    		);
-
-    		update_post_meta(
-    			$id,
-    			'end_date3',
-    			strip_tags($_POST['end_date3'])
-    		);
-
-    		update_post_meta(
-    			$id,
-    			'time3',
-    			strip_tags($_POST['time3'])
-    		);
-    	} else {
-    		delete_post_meta($id, 'cinema3');
-    		delete_post_meta($id, 'start_date3');
-    		delete_post_meta($id, 'end_date3');
-    		delete_post_meta($id, 'time3');
-    	}
-
-
-    	/*if (isset($_POST['cinema'])) {
-    		update_post_meta(
-    			$id,
-    			'cinema',
-    			$_POST['cinema']
-    		);
-    	}
-    	if (isset($_POST['start_date'])) {
-    		update_post_meta(
-    			$id,
-    			'start_date',
-    			$_POST['start_date']
-    		);
-    	}
-    	if (isset($_POST['end_date'])) {
-    		update_post_meta(
-    			$id,
-    			'end_date',
-    			$_POST['end_date']
-    		);
-    	}
-    	if (isset($_POST['time'])) {
-    		update_post_meta(
-    			$id,
-    			'time',
-    			$_POST['time']
-    		);
-    	}*/
 	}
 
 	function remove_metaboxes()

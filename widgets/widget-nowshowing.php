@@ -72,8 +72,39 @@ class NowShowing_Widget extends WP_Widget {
 
 		endwhile;
 		ksort($data);
-		print_r($data);
 		wp_reset_postdata();
+?>
+	<ul class="flexslider carousel">
+		<ul class="slides">
+			<li>
+				<div class="box">
+					<img src="http://localhost/sv/wp-content/uploads/2013/03/Costa-Rican-Frog-220x330.jpg" />
+					<h2>Movie Title</h2>
+					<p> Theu quick orwn kfjsa ;dlfkj aposierj m;laksdj foaisj r;lkajsdfkja ;seir a;klsdfj;laksdf</p>
+				</div>
+			</li>
+			<li><div class="box">
+					<img src="http://localhost/sv/wp-content/uploads/2013/03/Costa-Rican-Frog-220x330.jpg" />
+					<h2>Movie Title with Long text</h2>
+					<p> Theu quick orwn kfjsa ;dlfkj aposierj m;laksdj foaisj r;lkajsdfkja ;seir a;klsdfj;laksdf</p>
+				</div>
+			</li>
+			<li><img src="http://localhost/sv/wp-content/uploads/2013/03/Costa-Rican-Frog-220x330.jpg" /></li>
+			<li><img src="http://localhost/sv/wp-content/uploads/2013/03/Costa-Rican-Frog-220x330.jpg" /></li>
+		</ul>
+	</ul>
+	<script type="text/javascript">
+jQuery(window).load(function() {
+	jQuery('.flexslider').flexslider({
+		animation: 'slide',
+		animationLoop: false,
+		itemWidth: 230,
+		itemMargin: 0
+	});
+});
+
+	</script>	
+<?php
 		ob_end_flush();
 	}
 }

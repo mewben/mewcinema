@@ -1,1 +1,15 @@
 /* This stylesheet is used to style the public view of the plugin. */
+
+.flexslider {
+	background: transparent;
+	border: none;
+	box-shadow: none;
+	border-radius: 0;
+}
+.carousel {overflow:hidden;}
+.carousel li {
+	margin-right: 5px;
+}
+.box {
+	border: 1px solid #e2e2e2;
+}
