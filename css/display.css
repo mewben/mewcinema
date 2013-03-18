@@ -8,8 +8,27 @@
 }
 .carousel {overflow:hidden;}
 .carousel li {
-	margin-right: 5px;
+	margin-right: 27px;
+}
+.box, .box h2 {
+	font-family: Oswald, Arial;	
 }
 .box {
-	border: 1px solid #e2e2e2;
+	border: 1px solid #fff;
+}
+.box h2 {
+	font-size: 21px;
+
+}
+
+.cinema {
+	float:left;
+	color:#424242;
+}
+.rating {
+	float:right;
+	color: orange;
+}
+.screentime {
+	font-family: Arial;
 }

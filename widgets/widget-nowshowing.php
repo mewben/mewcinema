@@ -78,9 +78,11 @@ class NowShowing_Widget extends WP_Widget {
 		<ul class="slides">
 			<li>
 				<div class="box">
+					<div class="cinema">CINEMA 1</div>
+					<div class="rating">R-18</div>
 					<img src="http://localhost/sv/wp-content/uploads/2013/03/Costa-Rican-Frog-220x330.jpg" />
 					<h2>Movie Title</h2>
-					<p> Theu quick orwn kfjsa ;dlfkj aposierj m;laksdj foaisj r;lkajsdfkja ;seir a;klsdfj;laksdf</p>
+					<div class="screentime"> Theu quick orwn kfjsa ;dlfkj aposierj m;laksdj foaisj r;lkajsdfkja ;seir a;klsdfj;laksdf</div>
 				</div>
 			</li>
 			<li><div class="box">
@@ -89,8 +91,21 @@ class NowShowing_Widget extends WP_Widget {
 					<p> Theu quick orwn kfjsa ;dlfkj aposierj m;laksdj foaisj r;lkajsdfkja ;seir a;klsdfj;laksdf</p>
 				</div>
 			</li>
-			<li><img src="http://localhost/sv/wp-content/uploads/2013/03/Costa-Rican-Frog-220x330.jpg" /></li>
-			<li><img src="http://localhost/sv/wp-content/uploads/2013/03/Costa-Rican-Frog-220x330.jpg" /></li>
+			<li><div class="box">
+					<img src="http://localhost/sv/wp-content/uploads/2013/03/Costa-Rican-Frog-220x330.jpg" />
+					<h2>Movie Title</h2>
+					<p> Theu quick orwn kfjsa ;dlfkj aposierj m;laksdj foaisj r;lkajsdfkja ;seir a;klsdfj;laksdf</p>
+				</div></li>
+			<li><div class="box">
+					<img src="http://localhost/sv/wp-content/uploads/2013/03/Costa-Rican-Frog-220x330.jpg" />
+					<h2>Movie Title</h2>
+					<p>Theu quick orwn kfjsa ;dlfkj aposierj m;laksdj foaisj r;lkajsdfkja ;seir a;klsdfj;laksdf</p>
+				</div></li>
+				<li><div class="box">
+					<img src="http://localhost/sv/wp-content/uploads/2013/03/Costa-Rican-Frog-220x330.jpg" />
+					<h2>Narnia: The Lion, the Witch, and the Wardrobe</h2>
+					<div class="screentime"> Theu quick orwn kfjsa ;dlfkj aposierj m;laksdj foaisj r;lkajsdfkja ;seir a;klsdfj;laksdf</div>
+				</div></li>
 		</ul>
 	</ul>
 	<script type="text/javascript">
@@ -98,12 +113,25 @@ jQuery(window).load(function() {
 	jQuery('.flexslider').flexslider({
 		animation: 'slide',
 		animationLoop: false,
-		itemWidth: 230,
-		itemMargin: 0
+		itemWidth: 222,
+		itemMargin: 27
 	});
 });
 
 	</script>	
+	<script type="text/javascript">
+	  WebFontConfig = {
+	    google: { families: [ 'Oswald::latin' ] }
+	  };
+	  (function() {
+	    var wf = document.createElement('script');
+	    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+	      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+	    wf.type = 'text/javascript';
+	    wf.async = 'true';
+	    var s = document.getElementsByTagName('script')[0];
+	    s.parentNode.insertBefore(wf, s);
+	  })(); </script>
 <?php
 		ob_end_flush();
 	}
