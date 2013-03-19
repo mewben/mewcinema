@@ -72,6 +72,7 @@ class NowShowing_Widget extends WP_Widget {
 
 		endwhile;
 		ksort($data);
+		print_r($data);
 		wp_reset_postdata();
 ?>
 	<ul class="flexslider carousel">
@@ -80,32 +81,49 @@ class NowShowing_Widget extends WP_Widget {
 				<div class="box">
 					<div class="cinema">CINEMA 1</div>
 					<div class="rating">R-18</div>
+					<div class="last">Last 2 Days</div>
 					<img src="http://localhost/sv/wp-content/uploads/2013/03/Costa-Rican-Frog-220x330.jpg" />
-					<h2>Movie Title</h2>
-					<div class="screentime"> Theu quick orwn kfjsa ;dlfkj aposierj m;laksdj foaisj r;lkajsdfkja ;seir a;klsdfj;laksdf</div>
+					<h2><a href="#">Movie Title</a></h2>
+					<div class="screentime">10:30 AM | 2:00 PM | 4:30 PM | 8:00 PM LFS</div>
+					<div class="details"><a href="#">View Details</a></div>
+					<div class="buy"><a href="#">Buy Ticket</a></div>
 				</div>
 			</li>
-			<li><div class="box">
+			<li>
+				<div class="box">
+					<div class="cinema">CINEMA 2</div>
+					<div class="rating">R-18</div>
+					<div class="last">Last Day</div>
 					<img src="http://localhost/sv/wp-content/uploads/2013/03/Costa-Rican-Frog-220x330.jpg" />
-					<h2>Movie Title with Long text</h2>
-					<p> Theu quick orwn kfjsa ;dlfkj aposierj m;laksdj foaisj r;lkajsdfkja ;seir a;klsdfj;laksdf</p>
+					<h2><a href="#">Narnia: The Lion, the Witch, and the Wardrobe</a></h2>
+					<div class="screentime">10:30 AM | 2:00 PM | 4:30 PM | 8:00 PM LFS</div>
+					<div class="details"><a href="#">View Details</a></div>
+					<div class="buy"><a href="#">Buy Ticket</a></div>
 				</div>
 			</li>
-			<li><div class="box">
+			<li>
+				<div class="box">
+					<div class="cinema">CINEMA 3</div>
+					<div class="rating">R-18</div>
+					<div class="last">Last 2 Days</div>
 					<img src="http://localhost/sv/wp-content/uploads/2013/03/Costa-Rican-Frog-220x330.jpg" />
-					<h2>Movie Title</h2>
-					<p> Theu quick orwn kfjsa ;dlfkj aposierj m;laksdj foaisj r;lkajsdfkja ;seir a;klsdfj;laksdf</p>
-				</div></li>
-			<li><div class="box">
+					<h2><a href="#">The Amazing Spiderman</a></h2>
+					<div class="screentime">10:30 AM | 2:00 PM | 4:30 PM | 8:00 PM LFS</div>
+					<div class="details"><a href="#">View Details</a></div>
+					<div class="buy"><a href="#">Buy Ticket</a></div>
+				</div>
+			</li>
+			<li>
+				<div class="box">
+					<div class="cinema">CINEMA 4</div>
+					<div class="rating">R-18</div>
 					<img src="http://localhost/sv/wp-content/uploads/2013/03/Costa-Rican-Frog-220x330.jpg" />
-					<h2>Movie Title</h2>
-					<p>Theu quick orwn kfjsa ;dlfkj aposierj m;laksdj foaisj r;lkajsdfkja ;seir a;klsdfj;laksdf</p>
-				</div></li>
-				<li><div class="box">
-					<img src="http://localhost/sv/wp-content/uploads/2013/03/Costa-Rican-Frog-220x330.jpg" />
-					<h2>Narnia: The Lion, the Witch, and the Wardrobe</h2>
-					<div class="screentime"> Theu quick orwn kfjsa ;dlfkj aposierj m;laksdj foaisj r;lkajsdfkja ;seir a;klsdfj;laksdf</div>
-				</div></li>
+					<h2><a href="#">Movie Title</a></h2>
+					<div class="screentime">10:30 AM | 2:00 PM | 4:30 PM | 8:00 PM LFS</div>
+					<div class="details"><a href="#">View Details</a></div>
+					<div class="buy"><a href="#">Buy Ticket</a></div>
+				</div>
+			</li>
 		</ul>
 	</ul>
 	<script type="text/javascript">
@@ -119,19 +137,6 @@ jQuery(window).load(function() {
 });
 
 	</script>	
-	<script type="text/javascript">
-	  WebFontConfig = {
-	    google: { families: [ 'Oswald::latin' ] }
-	  };
-	  (function() {
-	    var wf = document.createElement('script');
-	    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-	      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-	    wf.type = 'text/javascript';
-	    wf.async = 'true';
-	    var s = document.getElementsByTagName('script')[0];
-	    s.parentNode.insertBefore(wf, s);
-	  })(); </script>
 <?php
 		ob_end_flush();
 	}
